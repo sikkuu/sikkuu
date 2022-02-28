@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+*, *:before, *:after {
+  -webkit-border-sizing: border-box;
+  -moz-border-sizing: border-box;
+  border-sizing: border-box;
+}
+
+@media screen and (min-width: 601px) {
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+	width: 98vw;
+	height: 100vh;}
+
+.content {grid-column: span 3 / auto;}
+
+.lnav  {
+	height: 100%;
+	padding-bottom:1em;
+	padding-top:5rem;}
+	
+.lnav:before {
+    content: "";
+    border-right: 0.125rem solid orange;
+    position: absolute;
+    height: 90%;
+    left: 26%;
+    top: 7%;}
+}
+#clasp {
+  display:flex;
+  height:100%;
+  margin:0.5em;
+  align-items:center; 
+}
+body {
+  background: #EFE0C1;
+  font-family: "Raleway", serif;
+  margin: 0;
+}
+h1,h2,h3 {
+  text-align: center;
+}
+.center {
+  margin: 1rem;
+  display:block;
+}
+ul {
+  margin-left:25%;
+}
+li.social {
+  display:inline-block;
+  list-style-type: none;
+  padding-left: 1em;
+  overflow: hidden;  
+}
+
+/*Gallery*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: auto;
+  align-content: start;
+}
+.item {
+  flex: 0 0 auto;
+  margin: 1.25rem;
+  border: 0.125rem solid orange;
+  box-shadow:0 0.125rem 0.3125rem 0 rgba(0,0,0,0.16),0 0.125rem 0.625rem 0 rgba(0,0,0,0.12);
+  height: 9.375rem;
+  width: 9.375rem;
+  min-height:-webkit-min-content;
+  min-height:-moz-min-content;
+  min-height:min-content;
+}
+.item:hover{opacity:0.5;}
+
+@media screen and (max-width: 600px) {
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 40vw;}
+	
+.content {
+	grid-column: span 2 / auto;
+	width: 100vw;}
+	
+.center {max-width: 100%;}
+
+.lnav  {
+	height: 100%;
+	padding-bottom:1em;
+	padding-top:2rem;
+	width: 100vw;}
+	
+.lnav:after {
+    content: ""; 
+    display: block; 
+    margin: 0 auto; 
+    width: 70%;
+	border-bottom: 0.125rem solid orange;
+}	
+.item {
+   flex: 0 0 auto;
+   margin: 1.25rem;
+   border: 0.125rem solid orange;
+   box-shadow:0 0.125rem 0.3125rem 0 rgba(0,0,0,0.16),0 0.125rem 0.625rem 0 rgba(0,0,0,0.12);
+   height: 7.5rem;
+   width: 7.5rem;
+   min-height:-webkit-min-content;
+   min-height:-moz-min-content;
+   min-height:min-content;}
+}
